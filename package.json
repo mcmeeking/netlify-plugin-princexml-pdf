@@ -51,7 +51,7 @@
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^5.2.6",
     "execa": "^9.5.2",
     "netlify-cli": "^20.0.0",
     "prettier": "^3.5.3",
