@@ -25,13 +25,9 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Update lib cache
-        run: sudo ldconfig
+        run: npm ci
 
       - name: Run tests
         run: npm test
