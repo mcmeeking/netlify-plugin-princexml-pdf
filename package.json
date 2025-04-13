@@ -1,7 +1,7 @@
 {
-  "name": "netlify-plugin-example",
+  "name": "netlify-plugin-princexml-pdf",
   "version": "0.0.1",
-  "description": "Netlify Build plugin - {{description}}",
+  "description": "Netlify Build plugin - Generate a PDF from HTML at the provided URL and save it to publish directory. Inspired by netlify-plugin-generate-pdf, just using PrinceXML instead of Puppeteer.",
   "type": "module",
   "exports": "./src/index.js",
   "main": "./src/index.js",
@@ -13,8 +13,28 @@
     "src/**/*.ejs",
     "manifest.yml"
   ],
+  "keywords": [
+    "netlify-plugin",
+    "netlify"
+  ],
+  "author": "jmcmeeking <james@mcmk.in>",
+  "license": "MIT",
+  "repository": "mcmeeking/netlify-plugin-princexml-pdf",
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "ava": {
+    "verbose": true,
+    "timeout": "100s",
+    "environmentVariables": {
+      "FORCE_COLOR": "1"
+    }
+  },
   "scripts": {
-    "init": "npm install --loglevel error --no-audit --no-fund && node init/bin.js",
     "build": "netlify-build",
     "test": "npm run lint && npm run ava",
     "lint": "npm run eslint && npm run prettier",
@@ -23,55 +43,17 @@
     "ava": "cross-env FORCE_COLOR=1 ava --verbose",
     "release": "release-it"
   },
-  "keywords": [
-    "netlify-plugin",
-    "netlify"
-  ],
-  "author": "{{author}} <{{email}}>",
-  "license": "{{license}}",
-  "repository": "{{repo}}",
-  "directories": {
-    "lib": "src",
-    "test": "test"
-  },
   "devDependencies": {
     "@netlify/build": "^26.5.3",
     "ava": "^4.0.0",
-    "chalk": "^5.0.0",
-    "cpy": "^9.0.0",
     "cross-env": "^7.0.2",
-    "del": "^6.0.0",
-    "email-validator": "^2.0.4",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-n": "^14.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "execa": "^6.0.0",
-    "fast-glob": "^3.2.4",
-    "filter-obj": "^3.0.0",
-    "fuzzy": "^0.1.3",
-    "git-remote-origin-url": "^4.0.0",
-    "inquirer": "^8.0.0",
-    "inquirer-autocomplete-prompt": "^2.0.0",
     "netlify-cli": "^9.16.2",
-    "omit.js": "^2.0.2",
     "prettier": "^2.1.2",
-    "release-it": "^15.0.0",
-    "semver": "^7.3.2",
-    "spdx-license-list": "^6.3.0",
-    "strip-ansi": "^7.0.0",
-    "username": "^6.0.0",
-    "yargs": "^17.0.0"
-  },
-  "engines": {
-    "node": "^14.14.0 || >=16.0.0"
-  },
-  "ava": {
-    "verbose": true,
-    "timeout": "100s",
-    "environmentVariables": {
-      "FORCE_COLOR": "1"
-    }
+    "release-it": "^15.0.0"
   }
 }
