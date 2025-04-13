@@ -1,6 +1,6 @@
 {
   "name": "netlify-plugin-princexml-pdf",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Netlify Build plugin - Generate a PDF from HTML at the provided URL and save it to publish directory. Inspired by netlify-plugin-generate-pdf, just using PrinceXML instead of Puppeteer.",
   "type": "module",
   "exports": "./src/index.js",
@@ -44,16 +44,21 @@
     "release": "release-it"
   },
   "devDependencies": {
-    "@netlify/build": "^26.5.3",
-    "ava": "^4.0.0",
+    "@netlify/build": "^29.20.7",
+    "ava": "^4.3.3",
     "cross-env": "^7.0.2",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "execa": "^6.0.0",
-    "netlify-cli": "^9.16.2",
+    "netlify-cli": "^20.0.0",
     "prettier": "^2.1.2",
-    "release-it": "^15.0.0"
+    "release-it": "^18.1.2",
+    "sinon": "^20.0.0"
+  },
+  "dependencies": {
+    "prince": "^1.12.0"
   }
 }

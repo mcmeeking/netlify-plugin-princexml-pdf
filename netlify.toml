@@ -8,12 +8,12 @@
 # Local path to the plugin.
 package = "."
   # Plugin configuration
-  #  [plugins.inputs]
-  #  foo = "bar"
+  [plugins.inputs]
+  url = "https://www.google.com/"
 
 [build]
 # Dummy build command
 command = "echo onBuild"
 
 [build.environment]
-NODE_VERSION = "14.14.0"
+NODE_VERSION = "22.0.0"

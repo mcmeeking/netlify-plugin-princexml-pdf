@@ -30,3 +30,45 @@ test('Netlify Build should not fail', async (t) => {
   // Check that build succeeded
   t.true(success)
 })
+
+test('Netlify Build should print a message that the license was not found by default', async (t) => {
+  const { logs } = await netlifyBuild({
+    config: NETLIFY_CONFIG,
+    buffer: true,
+  })
+
+  // Netlify Build output
+  console.log(
+    [logs.stdout.join('\n'), logs.stderr.join('\n')]
+      .filter(Boolean)
+      .join('\n\n'),
+  )
+
+  // Check that build succeeded
+  t.true(logs.stdout.some((line) => line.includes('Prince license not found')))
+})
+
+test('Netlify Build should not print a license missing message if the license was found', async (t) => {
+  const { logs } = await netlifyBuild({
+    config: NETLIFY_CONFIG,
+    buffer: true,
+    env: {
+      PRINCE_LICENSE: 'test-license-value',
+    },
+  })
+
+  // Netlify Build output
+  console.log(
+    [logs.stdout.join('\n'), logs.stderr.join('\n')]
+      .filter(Boolean)
+      .join('\n\n'),
+  )
+
+  // Check that build succeeded
+  t.true(
+    logs.stdout.some((line) => line.includes('PDF generated successfully')),
+  )
+  t.false(
+    logs.stdout.some((line) => line.includes('Prince license not found')),
+  )
+})
