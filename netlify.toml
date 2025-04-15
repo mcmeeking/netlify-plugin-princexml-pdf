@@ -7,9 +7,9 @@
 # Use the current plugin in builds for testing and debugging.
 # Local path to the plugin.
 package = "."
-  # Plugin configuration
-  [plugins.inputs]
-  url = "https://www.google.com/"
+# Plugin configuration
+[plugins.inputs]
+url = "https://www.google.com/"
 
 [build]
 # Dummy build command

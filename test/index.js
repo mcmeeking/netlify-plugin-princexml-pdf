@@ -68,7 +68,5 @@ test('Netlify Build should not print a license missing message if the license wa
   t.true(
     logs.stdout.some((line) => line.includes('PDF generated successfully')),
   )
-  t.false(
-    logs.stdout.some((line) => line.includes('Prince license not found')),
-  )
+  t.false(logs.stdout.some((line) => line.includes('Prince license not found')))
 })

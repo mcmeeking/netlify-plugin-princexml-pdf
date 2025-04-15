@@ -1,4 +1,4 @@
-🎉 Thanks for sending this pull request! 🎉
+# 🎉 Thanks for sending this pull request! 🎉
 
 Please make sure the title is clear and descriptive.
 
@@ -10,19 +10,19 @@ Otherwise please fill in the sections below.
 
 Example: I'm always frustrated when [...]
 
-**List other issues or pull requests related to this problem**
+## List other issues or pull requests related to this problem
 
 Example: This fixes #5012
 
-**Describe the solution you've chosen**
+## Describe the solution you've chosen
 
 Example: I've fixed this by [...]
 
-**Describe alternatives you've considered**
+## Describe alternatives you've considered
 
 Example: Another solution would be [...]
 
-**Checklist**
+## Checklist
 
 Please add a `x` inside each checkbox:
 
