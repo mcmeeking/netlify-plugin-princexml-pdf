@@ -55,7 +55,7 @@
     "execa": "^10.0.0",
     "netlify-cli": "^26.0.0",
     "prettier": "^3.5.3",
-    "release-it": "^20.0.0",
+    "release-it": "^21.0.0",
     "sinon": "^22.0.0"
   },
   "dependencies": {
